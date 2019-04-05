@@ -33,6 +33,9 @@ Demonstrate your understanding of this week's concepts by answering the followin
 The purpose of using sessions is for servers to store the client's data. Clients can use it as persist data in order to make a new request without providing the credentials more than once for a period of time.For example, We used it as authentication to make a request to api server.
 
 1. What does bcrypt do to help us store passwords in a secure manner.
+
+bcrypt is a module that helps us hash the passwords when storing it into a server. This will make it hard for attackers because it will take a lot of time in order to decipher the hashed password.
+
 1. What does bcrypt do to slow down attackers?
 1. What are the three parts of the JSON Web Token?
 
