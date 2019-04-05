@@ -1,5 +1,5 @@
 const axios = require('axios');
-
+const bcrpyt = require('bcryptjs')
 const { authenticate } = require('../auth/authenticate');
 
 module.exports = server => {
@@ -8,8 +8,21 @@ module.exports = server => {
   server.get('/api/jokes', authenticate, getJokes);
 };
 
+const Routes = require('./routes-model.js')
+
 function register(req, res) {
   // implement user registration
+  let user = req.body;
+  const hash = bcrpyt.hashSync(user.password, 10);
+  user.password = hash
+
+  Routes.add(user)
+    .then(saved => {
+      res.status(201).json(saved);
+    })
+    .catch(error => {
+      res.status(500).json(error);
+    });
 }
 
 function login(req, res) {
