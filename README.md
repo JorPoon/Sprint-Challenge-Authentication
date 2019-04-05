@@ -37,6 +37,9 @@ The purpose of using sessions is for servers to store the client's data. Clients
 bcrypt is a module that helps us hash the passwords when storing it into a server. This will make it hard for attackers because it will take a lot of time in order to decipher the hashed password.
 
 1. What does bcrypt do to slow down attackers?
+
+bcrypt hashes the password which is a combination of parameters and input.  The hash and the time it will take to decipher the hashes will produce a key derivation function. Attackers will have to match the password to everything to the table which can take an unwanted period of time.
+
 1. What are the three parts of the JSON Web Token?
 
 ## Project Set Up
