@@ -42,6 +42,8 @@ bcrypt hashes the password which is a combination of parameters and input.  The 
 
 1. What are the three parts of the JSON Web Token?
 
+The three parts of the json web token is header, payload, and signature.
+
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
