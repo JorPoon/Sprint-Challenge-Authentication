@@ -11,7 +11,7 @@ module.exports = server => {
 const Routes = require('./routes-model.js')
 
 function register(req, res) {
-  // implement user registration
+  // implement user registration -- working
   let user = req.body;
   const hash = bcrpyt.hashSync(user.password, 10);
   user.password = hash
