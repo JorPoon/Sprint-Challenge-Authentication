@@ -52,6 +52,8 @@ function login(req, res) {
    })
 }
 
+//getJokes endpoint is working after implementing log in end point -- checked
+
 function getJokes(req, res) {
   const requestOptions = {
     headers: { accept: 'application/json' },
